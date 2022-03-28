@@ -168,6 +168,28 @@ header #map-hours {
 		left: 120px; */
 	}
 }
+
+@media (max-width: 480px) {
+	.nav-top #logo {
+		min-width: 64px;
+		width: 64px;
+		height: 100%;
+	}	
+
+	#num {
+		font-size: 22px;
+		margin-left: 62px;
+	}
+
+	#address {
+		margin-right: 90px;
+		min-width: 90px;
+	}
+
+	#map-hours {
+		display: none;
+	}
+}
 /*---- Flexbox Top Navbar/Logo  -End--- */
 
 /*<-- Menu/Navbar-flexbox JS -Start- */
@@ -492,6 +514,22 @@ main img {
 	color: var(--secondary-color);
 	transition: 0.4s ease-in-out;
 }
+
+@media (max-width: 480px) {
+	.welcome {
+		padding-top: 30px;
+	}
+
+	.welcome h2 {
+		padding-top: 2px;
+	}	
+
+	.welcome p {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	
+}	
 
 /*---- Welcome -End--- */
 
