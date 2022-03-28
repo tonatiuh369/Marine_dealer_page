@@ -1,0 +1,689 @@
+/* Mario Tonatiuh Zamarron | tonatiuh@ciencias.unam.mx */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap'); */
+
+/* Custom properties/variables  */
+:root {
+	--main-dark: #222222;
+	--main-white: #ffffff;
+	--secondary-color: #22a2d3;
+	--secondary-dark: #1480a9;	
+}
+
+/* Base reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+
+*, 
+*:before, 
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box; 
+ 
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+	letter-spacing: 0.1em;
+    scroll-behavior: smooth;	
+  }
+
+.icon-bar,
+#num,
+.collapse ul li a,
+.welcome h3,
+.welcome h2,
+.welcome span,
+.col,
+footer
+{
+	text-transform: uppercase;
+}
+
+/* Fonts */
+.navbar-header #num,
+.services-row h2,
+.services-row p,
+.welcome h2,
+.welcome h3,
+.footer h2 {
+  font-weight: 700;
+}
+
+
+body {
+	background-color: var(--main-dark);
+	color: var(--main-white);
+	box-sizing: border-box;
+}
+
+/* --- HEADER ---  */
+/*---- Flexbox Top Navbar/Logo  -Start--- */
+.nav-top {
+	display: flex;
+	width: 100%;
+	height: 100px;
+/* 	background: #eee; */
+	align-items: center;
+	justify-content: center;
+/* 	justify-content: space-evenly; */
+	padding: 0 100px;
+	font-size: 0.94em;
+  }
+   
+.nav-top a {
+	text-decoration: none;
+	margin: 0 12px;
+	color: var(--secondary-color);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1em;
+}
+
+.nav-top #logo {
+    margin-left: auto;
+    margin-right: auto;
+	min-width: 96px;
+	width: 96px;
+	height: 100%;
+	
+/* 	background: rgba(75, 223, 30, 0.3);    */
+	background-image: url('images/dealer-logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: 0 50px;
+}
+
+/* .nav-top #logo {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) translateY(5px);
+} */
+
+#num {
+	color: var(--main-white);
+	font-size: 31px;
+	font-weight: 700;
+	margin-top: -12px;
+	line-height: 1.1em;
+}
+
+header #map-hours {
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 6px 14px 7px 14px;
+}
+
+#map-hours:hover {
+	background-color: var(--main-white);
+	color: var(--secondary-color);
+	transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 885px) {
+	.nav-top {
+		height: 80px;
+		padding: 0 7px;
+		justify-content: space-evenly;
+	}
+	
+	.nav-top #logo {
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 80px;
+		width: 80px;
+		height: 100%;
+		margin: 0 17px;	
+	}	
+
+	.nav-top #logo {
+		position: absolute;
+		left: 47%;
+		transform: translateX(-50%) translateY(0px);
+	}
+	
+	#num {
+		font-size: 27px;
+		position: relative;
+		right: -30px;
+		width: 220px;
+		margin-right: -150px;
+	}
+
+	#address {
+		 margin-left: 320px;
+		/* position: relative;
+		left: 120px; */
+	}
+}
+/*---- Flexbox Top Navbar/Logo  -End--- */
+
+/*<-- Menu/Navbar-flexbox JS -Start- */
+.navbar-flexb {
+	display: flex;
+	text-transform: uppercase;
+	color: var(--main-white);
+	padding: 0;
+	font-size: 1.1em;
+	letter-spacing: 0;
+}
+
+.navbar-flexb ul {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-white);
+/* 	z-index: 100; */
+	background-color: var(--secondary-color);
+	padding: 0;
+	border-radius: 0;
+	border: none;
+}
+
+.navbar-flexb li {
+	list-style-type: none;
+	padding: 0 15px;
+}
+
+.navbar-flexb a {
+	text-decoration: none;
+	color: var(--main-white);
+}
+
+.navbar-toggle {
+	display: none;
+	font-size: 25px;
+	margin-left: auto;
+	padding: 0;
+}
+
+.navbar-links:hover {
+	color: var(--main-white);
+	background-color: var(--secondary-dark);
+	transition: 0.3s ease-in-out;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	margin-bottom: -20px;
+}
+
+@media (max-width: 675px) {
+ 	.navbar-flexb ul {
+		flex-wrap: wrap;
+	}
+	
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-toggle:hover {
+		cursor: pointer;
+	}
+
+	.navbar-links {
+		display: none;
+		width: 100%;
+		text-align: center;
+
+		margin-top: -22px;
+		margin-bottom: 25px;
+		line-height: 45px;
+	}
+
+	.navbar-links:hover {
+		color: var(--main-white);
+		background-color: var(--secondary-dark);
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.active {
+		display: block;
+	}
+}
+/*---- Menu/Navbar-flexbox JS -End--- */
+
+	
+/*---- JS on Scroll Auto Hide  Header/Navbar -Start--- */
+/* https://dev.to/areeburrub/hide-navbar-as-scroll-down-in-less-than-10-lines-of-javascript-1i00 */
+.header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	 background: var(--main-dark);
+	/*border-radius:0 0 30px 30px;
+	color:white;
+	text-align:center;
+	 */
+	/*Define a height for NavBar*/
+	height:130px;
+	transition: 0.5s ease-in-out;
+	/*and a transition time for a smooth appearence*/
+}
+
+main {
+	margin-top: 150px;
+}
+
+@media (max-width: 885px) {
+	main {
+		margin-top: 130px;
+	}
+}
+
+@media (max-width: 675px) {
+	main {
+		margin-top: 134px;
+	}
+}
+/*---- JS on Scroll Auto Hide Header/Navbar -End--- */
+
+
+/*---- Services Row -Start--- */
+main {
+	background-color: var(--main-dark);
+	box-sizing: border-box;
+	width: 100%;
+}
+
+main img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 0;
+}
+
+.services-row {
+/* 	text-align: center; */
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: grid;
+	grid-template-columns: repeat(4, 188px);
+	gap: 7px;
+	justify-content: center;
+
+	width: 100%;
+
+}
+
+@media (max-width: 800px) {
+	.services-row {
+		grid-template-columns: repeat(2, 188px)	;	
+/* 		justify-content: space-evenly; */
+		gap: 40px;
+	}
+}
+
+@media (max-width: 450px) {
+	.services-row {
+		grid-template-columns: 188px;	
+		gap: 20px;
+	}
+}
+
+.services-row h2 {
+	font-size: 2.3em;
+
+}
+
+.col,
+.col1 a,
+.col2 a,
+.col3 a,
+.col4 a {
+/* 	width: 280px;
+	height: 200px; */
+	width: 188px; /* = 280px/1.49 */
+	height: 134px; /* = 200px/1.49 */
+	display: inline-block;
+/* 	vertical-align: top;
+ */	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.col1 a,
+.col2 a,
+.col3 a,
+.col4 a {
+	color: var(--main-white);
+	text-decoration: none;
+}
+
+.col p {
+	color: var(--secondary-color);
+}
+
+.col h2 {
+	margin: 0;
+}
+
+.col1 a {
+	background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(images/cta-new.jpg);
+}
+
+.col1 a:hover {
+	background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(images/cta-new.jpg);
+}
+
+.col2 a {
+	background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(images/cta-used.jpg);
+}
+
+.col2 a:hover {
+	background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(images/cta-used.jpg);
+}
+
+.col3 a {
+	background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(images/cta-services.jpg);
+}
+
+.col3 a:hover {
+	background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(images/cta-services.jpg);
+}
+
+.col4 a {
+	background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(images/cta-finance.jpg);
+}
+
+.col4 a:hover {
+	background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(images/cta-finance.jpg);
+}
+
+.col1 a, .col1 a:hover,
+.col2 a, .col2 a:hover,
+.col3 a, .col3 a:hover,
+.col4 a, .col4 a:hover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*---- Services Row -End--- */
+
+/*---- Welcome -Start--- */
+.welcome h2, .welcome h3, .welcome p, .welcome span {
+	margin: 0;
+	padding: 0;
+}
+
+.welcome {
+	min-height: 350px;
+	background-image: url(images/bg-welcome-area.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding-top: 45px;
+
+	width: 100%;
+
+}
+
+.welcome h3 {
+	font-size: 1.3em;
+}
+
+.welcome h2, .welcome span {
+	color: var(--secondary-color);
+}
+
+.welcome h2 {
+	padding-top: 5px;
+}
+
+.welcome p {
+	padding-top: 25px;
+	padding-bottom: 40px;
+	margin: 0 25%;
+	text-align: center;
+	font-size: 0.92em;
+	line-height: 1.8em;
+	letter-spacing: 0;
+}
+
+@media (max-width: 720px) {
+	.welcome p {
+		margin: 0 10%
+	}
+}
+
+.welcome span {
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 4.5px 25px;
+}
+
+.welcome span a {
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
+.welcome span:hover {
+	background-color: var(--main-white);
+	color: var(--secondary-color);
+	transition: 0.4s ease-in-out;
+}
+
+/*---- Welcome -End--- */
+
+/*---- Brands -Start--- */
+.brands {
+	background-color: var(--main-white);
+/* 	display: flex;*/	
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 40px 10px;
+	width: 100%;
+	margin: 0;
+	display: inline-flex;
+	row-gap: 40px; /* espacio al pasar a dos o más filas */
+}
+
+.brands img {
+	padding: 0px 20px;
+	width: 150px;
+}
+
+.brands img:nth-child(1),
+.brands img:nth-child(5),
+.brands img:nth-child(6){
+	width: 130px;
+}
+/*---- Brands -End--- */
+
+/*---- Footer -Start--- */
+footer {
+	background-color: var(--main-dark);
+}
+
+.col-footer {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.col-footer h2, .remark, .col-footer .remark a, .col-footer .remark {
+	color: var(--secondary-color);
+}
+
+.col-footer a {
+	color: var(--main-white);
+	text-decoration: none;
+}
+
+.footer {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 30px 30px;
+	background-color: var(--main-dark);
+}
+
+.footer > * {
+	flex:  1 100%;
+}
+
+.footer__addr {
+	margin-right: 1.25em;
+	margin-bottom: 2em;
+}
+
+.footer ul {
+	list-style: none;
+	padding-left: 0;
+}
+  
+.footer li {
+	line-height: 1.5em;
+}
+
+
+
+
+.footer__nav {
+	display: flex;
+	  flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+	flex: 1 50%;
+	margin-right: 1.25em;
+  }
+  
+  .nav__ul--extra {
+	column-count: 2;
+/* 	column-width: 55px;*/
+	column-gap: 0;
+  }
+
+
+
+@media screen and (min-width: 40.375em) {
+	.footer__nav > * {
+	  flex: 1;
+	}
+	
+	.nav__item--extra {
+	  flex-grow: 2;
+	}
+	
+	.footer__addr {
+	  flex: 1 0px;
+	}
+	
+	.footer__nav {
+	  flex: 2 0px;
+	}
+  }
+
+  /* --------------- */
+
+.footer-contact .map_hours {
+	padding-top: 1em;
+}
+
+.grid-footer {
+	margin: 0 90px;
+	padding: 0;
+	display: grid;
+	width: 100%;
+/* 	grid-template-columns: 240px 240px 240px 250px;*/	
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+/* 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+/*  grid-template-columns: repeat(auto-fill, 270px);*/	
+	grid-template-rows: 1fr;
+	grid-gap: 5px;
+	
+	justify-content: space-evenly;
+	align-items: start;
+
+	grid-template-areas: 
+	"col1 col2 col3 col4";
+
+	justify-items: center;
+
+}  
+
+.footer-contact {
+	grid-area: col1;
+}
+
+.footer-links  {
+	grid-area: col2;
+}
+
+.footer-hours {
+	grid-area: col3;
+}
+
+.legal {
+	grid-area: col4;
+	padding-top: 43px;
+	font-size: 0.8em;
+	letter-spacing: 0;
+}
+
+@media (max-width: 950px) {
+	.grid-footer {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+/* 		justify-content: center; */
+		justify-items: center;
+
+		grid-template-areas: 
+	"col1 col2"
+	"col3 col4";
+	}
+
+}
+@media (max-width: 640px) {
+	.grid-footer {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+/* 		justify-content: center; */
+		grid-template-areas: 
+	"col1"
+	"col2"
+	"col3"
+	"col4";
+	}
+
+	.legal {
+		padding: 0;
+		margin: 0;
+	}
+
+	.col-footer {
+		text-align:center;
+	}
+}
+/*---- Footer -End--- */

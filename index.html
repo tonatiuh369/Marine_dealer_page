@@ -1,0 +1,158 @@
+<!-- Mario Tonatiuh Zamarron | tonatiuh@ciencias.unam.mx -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>*Prueba Navbar</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="libs/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+		<!-- <script src="libs/jquery-3.3.1.min.js"></script>
+		<script src="libs/bootstrap-3.3.7.min.js"></script> -->
+		<script type="text/javascript" src="script.js" defer></script>
+		<!-- font awesome library in https://fontawesome.com/v4.7.0/icons/ -->
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+		<header class="header" id="navbar">
+			<!-- --Flexbox Top Navbar/Logo  -Start- -- -->
+			<nav class="nav-top">
+				<a href="" id="num">(555) 555-5555</a>
+				<div id="logo"></div>
+				<a href="" id="address">120 W 2nd St</br>
+					 Duluth, MN 55802</a>
+				<a href="" id="map-hours">Map & Hours</a>
+			</nav>
+			<!-- --Flexbox Top Navbar/Logo  -End- -- -->
+
+			<!-- --Flexbox Navbar JS -Start- -- -->
+			<nav class="navbar-flexb">
+				<ul class="nav__links navbar link-container">
+					<!--<li class="navbar-logo">Logo</li> -->
+					<span class="navbar-toggle"><i class="fa fa-bars"></i></span>
+					<li class="navbar-links"><a href="#">Home</a></li>
+					<li class="navbar-links"><a href="#">Marine Services</a></li>
+					<li class="navbar-links"><a href="#">Parts Request</a></li>
+					<li class="navbar-links"><a href="#">Rentals</a></li>
+					<li class="navbar-links"><a href="#">Services</a></li>
+					<li class="navbar-links"><a href="#">About Us</a></li>
+					<li class="navbar-links"><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+			<!-- --Flexbox Navbar JS -End- -- -->
+		</header>
+
+		<main>
+			<img src="images/bg-hero-shot.jpg" height="420" alt="">
+			<div class="container-fluid">
+				<!-- --Services Row -Start- -- -->
+				<div class="services-row">
+					<div class="col col1">
+						<a href="#">
+							<h2>New</h2>
+							<p>Shop New Models</p>
+						</a>
+					</div>
+					<div class="col col2">
+						<a href="#">
+							<h2>Pre-Owned</h2>
+							<p>View Inventory</p>
+						</a>
+					</div>
+					<div class="col col3">
+						<a href="#">
+							<h2>Services</h2>
+							<p>View Our Services</p>
+						</a>
+					</div>
+					<div class="col col4">
+						<a href="#">
+							<h2>Finance</h2>
+							<p>Apply Today</p>
+						</a>
+					</div>
+				</div>
+				<!-- --Services Row -End- -- -->
+
+				<!-- --Welcome -Start- -- -->
+				<div class="welcome">
+					<h3>Welcome to</h3>
+					<h2>Marine Dealer</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+						ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+						dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+						officia deserunt mollit anim id est laborum.</p>
+					<span><a href="#">Read More<a></span>
+				</div>
+				<!-- --Welcome -End- -- -->
+
+				<!-- --Brands -Start- -- -->
+				<div class="brands">
+					<img src="images/yamaha.png" alt="">
+					<img src="images/hurricane.png" alt="">
+					<img src="images/sweetwater.png" alt="">
+					<img src="images/aqua-patio.png" alt="">
+					<img src="images/sanpan.png" alt="">
+					<img src="images/rinker.png" alt="">
+				</div>
+				<!-- --Brands -End- -- -->
+			</div>
+		</main>
+
+		<!-- --Footer -Start- -- -->
+		<footer class="container-fluid footer">
+			<div class="footer__nav grid-footer">
+				<div class="col-footer footer-contact footer__addr">
+					<h2 class="nav__title">Contact Us</h2>
+					<address>
+					120 W 2nd St</br>
+					Duluth, MN 55802
+					</address>
+					<span>
+						<a href="tel:+5555555555"><span class="remark">PHONE:</span><span> (555) 555-5555</span></a>
+					</span>
+					<p class="remark map_hours"><a href="#">Map & Hours</a></p>
+				</div>
+			
+				<div class="col-footer footer-links nav__item nav__item--extra">
+					<h2 class="nav__title">Quick Links</h2>
+					<ul class="nav__ul">
+						<li><a href="#">Marine Services</a></li>
+						<li><a href="#">Parts Requests</a></li>
+						<li><a href="#">Rentals</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+
+				<div class="col-footer footer-hours nav__item">
+					<h2 class="nav__title">Hours</h2>
+					<ul class="nav__ul nav__ul--extra">
+						<li>Mon - Fri</li>
+						<li>Sat</li>
+						<li>Sun</li>
+						<li>8AM - 4PM</li>
+						<li>8AM - 12PM</li>
+						<li>Closed</li>
+					</ul>
+				</div>
+			
+				<div class="col-footer legal nav__item">
+					<h2 class="nav__title"></h2>
+					<ul class="nav__ul">
+						<li>Copyright 2021 ARI Network Services Inc.</li>
+						<li>All Rights Reserved</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- --Footer -End- -- -->
+
+	</body>
+</html>
