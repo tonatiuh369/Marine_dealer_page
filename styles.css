@@ -179,6 +179,7 @@ header #map-hours {
 	#num {
 		font-size: 22px;
 		margin-left: 62px;
+	    min-width: 100px;
 	}
 
 	#address {
@@ -316,6 +317,12 @@ main {
 @media (max-width: 675px) {
 	main {
 		margin-top: 134px;
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		margin-top: 133px;
 	}
 }
 /*---- JS on Scroll Auto Hide Header/Navbar -End--- */
@@ -517,7 +524,7 @@ main img {
 
 @media (max-width: 480px) {
 	.welcome {
-		padding-top: 30px;
+		padding-top: 25px;
 	}
 
 	.welcome h2 {
@@ -525,8 +532,8 @@ main img {
 	}	
 
 	.welcome p {
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-top: 18px;
+		padding-bottom: 24px;
 	}
 	
 }	
@@ -723,5 +730,20 @@ footer {
 	.col-footer {
 		text-align:center;
 	}
+}
+
+@media (max-width: 480px) {
+	.footer__nav > * {
+		margin-right: 0;
+	  }
+
+	.nav__title {
+		width: 180px;
+
+	}
+
+	.grid-footer {
+		margin: 0;
+	}	
 }
 /*---- Footer -End--- */
